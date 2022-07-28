@@ -4,9 +4,9 @@ import main.java.snakeladder.model.Button;
 import main.java.snakeladder.model.ButtonStatus;
 import main.java.snakeladder.model.Player;
 
-public class NormalButtonStartStrategy implements ButtonStartStrategies{
+public class ButtonWithSixStartStrategy implements ButtonStartStrategies{
     @Override
-    public boolean canStart(Button button, int pos, Player player) {
+    public boolean canStart(Button button, int pos) {
         return button.getButtonStatus() == ButtonStatus.LOCKED && pos == 6;
     }
 }
